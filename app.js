@@ -5,13 +5,15 @@ const urlRoutes = require("./routes/urlRoutes");
 
 const app = express();
 
+
 // Middleware
 app.use(express.json());
 app.use(cors());
 
+
 // Routes
 app.use("/api", urlRoutes);
-app.use("/", urlRoutes);
+
 
 // Database Connection Test
 pool.query("SELECT NOW()")
@@ -23,9 +25,11 @@ pool.query("SELECT NOW()")
     console.log(err);
   });
 
+
 // Home Route
 app.get("/", (req, res) => {
     res.send("URL Shortener API is Running 🚀");
 });
+
 
 module.exports = app;

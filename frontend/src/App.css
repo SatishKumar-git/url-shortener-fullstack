@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+
+  margin:0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.main {
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background:linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
+
+}
+
+
+
+.card {
+
+  width:480px;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+
+  animation:show 0.5s ease;
+
+}
+
+
+
+.card h1 {
+
+  font-size:32px;
+
+}
+
+
+
+.card p {
+
+  color:#666;
+
+}
+
+
+
+input {
+
+  width:100%;
+
+  padding:15px;
+
+  margin-top:20px;
+
+  border-radius:10px;
+
+  border:1px solid #ddd;
+
+  font-size:15px;
+
+}
+
+
+
+button {
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+
+
+.shortenBtn {
+
+  width:100%;
+
+  margin-top:20px;
+
+  padding:15px;
+
+  background:#667eea;
+
+  color:white;
+
+  border:none;
+
+  border-radius:10px;
+
+  font-size:16px;
+
+}
+
+
+
+.shortenBtn:hover {
+
+  background:#5565d8;
+
+}
+
+
+
+.clearBtn {
+
+  width:100%;
+
+  margin-top:15px;
+
+  padding:15px;
+
+  background:#e74c3c;
+
+  color:white;
+
+  border:none;
+
+  border-radius:10px;
+
+  font-size:16px;
+
+}
+
+
+
+.clearBtn:hover {
+
+  background:#c0392b;
+
+}
+
+
+
+.result {
+
+  margin-top:30px;
+
+}
+
+
+
+.urlBox {
+
+  display:flex;
+
+  gap:10px;
+
+  align-items:center;
+
+}
+
+
+
+.urlBox a {
+
+  flex:1;
+
+  padding:12px;
+
+  background:#f2f2f2;
+
+  border-radius:8px;
+
+  text-decoration:none;
+
+  color:#333;
+
+  word-break:break-all;
+
+}
+
+
+
+.copyBtn {
+
+  padding:12px 18px;
+
+  background:#111;
+
+  color:white;
+
+  border:none;
+
+  border-radius:8px;
+
+}
+
+
+
+.error {
+
+  margin-top:15px;
+
+  color:red;
+
+}
+
+
+
+button:hover {
+
+  transform:translateY(-2px);
+
+}
+
+
+
+@keyframes show {
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+
+
+@media(max-width:600px){
+
+
+  .card {
+
+    width:90%;
+
+    padding:25px;
+
+  }
+
+
+  .urlBox {
+
+    flex-direction:column;
+
+  }
+
+
+  .copyBtn {
+
+    width:100%;
+
+  }
+
+}

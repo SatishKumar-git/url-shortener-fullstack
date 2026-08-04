@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const pool = require("./db/db");
 const urlRoutes = require("./routes/urlRoutes");
@@ -6,9 +7,11 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 // Routes
 app.use("/api", urlRoutes);
+app.use("/", urlRoutes);
 
 // Database Connection Test
 pool.query("SELECT NOW()")

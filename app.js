@@ -11,15 +11,15 @@ app.use(express.json());
 app.use(cors());
 
 
+// Routes
+app.use("/api", urlRoutes);
+app.use("/", urlRoutes);
+
+
 // Home Route
 app.get("/", (req, res) => {
     res.send("URL Shortener API is Running 🚀");
 });
-
-
-// Routes
-app.use("/api", urlRoutes);
-app.use("/", urlRoutes);
 
 
 // Database Connection Test
@@ -32,5 +32,5 @@ pool.query("SELECT NOW()")
     console.log(err);
   });
 
-
+  
 module.exports = app;
